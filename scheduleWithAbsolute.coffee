@@ -1,0 +1,1 @@
+Bacon.scheduleWithAbsolute = (t, value) -> Bacon.later t - Date.now(), value
