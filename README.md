@@ -3,7 +3,7 @@ Bacon.Plugins
 
 An attempt to make Bacon.Plugins repository
 
-Today there are a few plugins in this repo, soon I'd add some docs (and AMD support, of course).
+Today there are a few plugins in this repo, soon I'd add some more docs 
 
 ajax
 ----
