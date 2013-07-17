@@ -19,7 +19,7 @@ Note: message format should be smth like this `{type:"myMessageType", value: "He
 fromOnEvent
 -----------
 
-Helper for working with old on<EventName> (onclick, onkeydown, etc..) event handling model.
+Helper for working with old onEventName (onclick, onkeydown, etc..) event handling model.
 
 scheduleWithAbsolute
 --------------------
