@@ -1,8 +1,8 @@
 init = (Bacon) ->
   Bacon.fromOnEvent = (target, eventName) ->
-  Bacon.fromBinder (handler) ->
-    target[eventName] = (args...) -> handler(args...)
-    (-> target[eventName] = null)
+    Bacon.fromBinder (handler) ->
+      target[eventName] = (args...) -> handler(args...)
+      (-> target[eventName] = null)
 
 if module?
   Bacon = require("baconjs")

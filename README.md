@@ -16,6 +16,11 @@ bus.onoff
 An extension for Bacon.Bus which helps you to implement easy message pub/sub in your app.  
 Note: message format should be smth like this `{type:"myMessageType", value: "Hello!", ...}`
 
+dom.asEventStream
+-----------------
+
+Extends native DOM elems (HTMLElement) with asEventStream method. IE9+ compliant, no support for legacy IEs 
+
 fromOnEvent
 -----------
 
