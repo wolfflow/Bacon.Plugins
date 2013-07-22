@@ -21,6 +21,16 @@ dom.asEventStream
 
 Extends native DOM elems (HTMLElement) with asEventStream method. IE9+ compliant, no support for legacy IEs 
 
+jquery.events
+-------------
+
+jQuery event helpers from Bacon.UI library
+
+jquery.fx
+---------
+
+jQuery animation effect helpers from Bacon.UI library
+
 fromOnEvent
 -----------
 
