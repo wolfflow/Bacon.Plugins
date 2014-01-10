@@ -22,7 +22,7 @@ if module?
   $ = require("jquery")
   module.exports = init(Bacon, $)
 else
-  if typeof require is "function"
-    define "bacon-ajax", ["bacon", "jquery"], init
+  if typeof define == "function" and define.amd
+    define ["bacon", "jquery"], init
   else
     init(this.Bacon, this.$)

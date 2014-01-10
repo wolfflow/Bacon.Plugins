@@ -6,7 +6,7 @@ if module?
   Bacon = require("baconjs")
   module.exports = init(Bacon)
 else
-  if typeof require is "function"
-    define "bacon-dom-asEventStream", ["bacon"], init
+  if typeof define == "function" and define.amd
+    define ["bacon"], init
   else
     init(this.Bacon)

@@ -36,6 +36,11 @@ fromOnEvent
 
 Helper for working with old onEventName (onclick, onkeydown, etc..) event handling model.
 
+scheduleAnimFrame
+--------------------
+
+Leverage requestAnimationFrame in Bacon.js way!
+
 scheduleWithAbsolute
 --------------------
 
