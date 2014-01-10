@@ -1,6 +1,6 @@
 init = (Bacon) ->
   
-  window.cancelRequestAnimFrame = do ->
+  cancelRequestAnimFrame = do ->
     window.cancelAnimationFrame or
     window.webkitCancelRequestAnimationFrame or
     window.mozCancelRequestAnimationFrame or
@@ -8,7 +8,7 @@ init = (Bacon) ->
     window.msCancelRequestAnimationFrame or
     clearTimeout
 
-  window.requestAnimFrame = do ->
+  requestAnimFrame = do ->
     window.requestAnimationFrame or
     window.webkitRequestAnimationFrame or
     window.mozRequestAnimationFrame or
