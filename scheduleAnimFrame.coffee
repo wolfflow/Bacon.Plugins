@@ -1,11 +1,11 @@
 init = (Bacon) ->
   cancelRequestAnimFrame = do ->
-      window.cancelAnimationFrame or
-      window.webkitCancelRequestAnimationFrame or
-      window.mozCancelRequestAnimationFrame or
-      window.oCancelRequestAnimationFrame or
-      window.msCancelRequestAnimationFrame or
-      clearTimeout
+    window.cancelAnimationFrame or
+    window.webkitCancelRequestAnimationFrame or
+    window.mozCancelRequestAnimationFrame or
+    window.oCancelRequestAnimationFrame or
+    window.msCancelRequestAnimationFrame or
+    clearTimeout
 
   requestAnimFrame = do ->
     window.requestAnimationFrame or
