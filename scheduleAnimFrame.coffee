@@ -1,12 +1,11 @@
 init = (Bacon) ->
-  
   cancelRequestAnimFrame = do ->
-    window.cancelAnimationFrame or
-    window.webkitCancelRequestAnimationFrame or
-    window.mozCancelRequestAnimationFrame or
-    window.oCancelRequestAnimationFrame or
-    window.msCancelRequestAnimationFrame or
-    clearTimeout
+      window.cancelAnimationFrame or
+      window.webkitCancelRequestAnimationFrame or
+      window.mozCancelRequestAnimationFrame or
+      window.oCancelRequestAnimationFrame or
+      window.msCancelRequestAnimationFrame or
+      clearTimeout
 
   requestAnimFrame = do ->
     window.requestAnimationFrame or
@@ -29,6 +28,15 @@ init = (Bacon) ->
     Bacon.fromBinder (handler) ->
       id = scheduleFrame(handler)
       ->  cancelRequestAnimFrame(id)
+    
+
+  Bacon.repeatedlyOnFrame = (values, divisor = 1) ->
+    index = 0
+    Bacon.scheduleAnimFrame()
+    .scan(0, (x) -> x + 1)
+    .filter((tick) -> !(tick % divisor))
+    .map(-> values[index++ % values.length])
+    .toEventStream()
 
 if module?
   Bacon = require("baconjs")
